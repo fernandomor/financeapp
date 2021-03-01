@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom'
 function App() {
   return (
-    <>
+    <div className="flex">
     <Router>
           <Header />
           <Sidebar />
@@ -17,7 +17,7 @@ function App() {
             <Route exact path="/:currency" component={CurrenciesRates} />
           </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 export default App;

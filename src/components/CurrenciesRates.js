@@ -46,29 +46,34 @@ export default function CurrenciesRates() {
         })
     }    
     return (
-        <div>
-            <div>
+        <div class="w-10/12">
+            <nav class="bg-white shadow bg-gray-800">
                 <input 
+                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     type="date"
                     onChange={(e) => {handleDate(e)}}
                     value={date.startDate}
                     name="startDate"
                 />
                 <input 
+                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     type="date"
                     onChange={(e) => {handleDate(e)}}
                     value={date.endDate}
                     name="endDate"
                 />
-            </div>
+            </nav>
+            <div className="mt-10">
             {
                 loading ?
-                    <h1>Cargando...</h1>
-                    :
-                    <Line 
-                        data={data}
-                    />
+                <h1>Cargando...</h1>
+                :
+                <Line 
+                data={data}
+                />
             }
+            </div>
         </div>
     )
 }
+
